@@ -46,6 +46,14 @@
         <color>#AAAAAA</color>
     </fontdef>
     
+    <fontdef name="videolarge_red" from="videolarge">
+        <color>#FF0000</color>
+    </fontdef>
+    
+    <fontdef name="videolarge_green" from="videolarge">
+        <color>#00FF00</color>
+    </fontdef>
+    
     <fontdef name="videoxlarge" from="videosmall">
         <size>50</size>
         <color>#FFFFFF</color>

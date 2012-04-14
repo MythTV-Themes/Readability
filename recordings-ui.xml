@@ -41,31 +41,34 @@
 
         <clock name="clock">
             <area>420,10,520,60</area>
-            <font>baselarge</font>
+            <font>videolarge</font>
             <align>vcenter,left</align>
             <format>%DATE%, %TIME%</format>
         </clock>
 
         <textarea name="pagetitle" from="basetextarea">
             <area>50,10,670,60</area>
-            <font>baselarge</font>
+            <font>videolarge</font>
             <align>vcenter,left</align>
             <value>Watch Recordings</value>
         </textarea>
 
-        <buttonlist name="groups" from="basebuttonlist">
-            <area>15,86,474,338</area>
-            <buttonarea>32,5,434,328</buttonarea>
+<!--        <buttonlist name="groups" from="basebuttonlist">-->
+        <buttonlist name="groups">
+            <area>15,86,474,40</area>
+            <buttonarea>32,5,434,40</buttonarea>
             <spacing>6</spacing>
             <wrapstyle>items</wrapstyle>
-            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <layout>horizontal</layout>
+            <!--<triggerevent context="Global" action="ESCAPE">DOWN</triggerevent>-->
             <statetype name="buttonitem">
                 <state name="active">
+                    <area>0,0,100%,30</area>
                     <shape name="buttonbackground"> 
                         <area>0,0,434,30</area> 
                     </shape> 
-                    <textarea name="name" from="buttontext">
-                        <font>basesmallgrey</font>
+                    <textarea name="buttontext">
+                        <font>videolarge</font>
                         <cutdown>yes</cutdown>
                     </textarea>
                 </state>
@@ -73,14 +76,18 @@
                     <shape name="buttonbackground">                         
                         <area>0,0,434,30</area>
                     </shape> 
-                    <textarea name="name" from="buttontext">
-                        <font>basesmall</font>
+                    <textarea name="buttontext">
+                        <area>16,0,94%,31</area>
+                        <font>videolarge</font>
                     </textarea>
                 </state>
                 <state name="selectedactive" from="selectedinactive">
                     <shape name="buttonbackground">                         
                         <area>0,0,434,30</area>
                     </shape> 
+                    <textarea name="buttontext">
+                    <font>videolarge</font>
+                </textarea>
                 </state>
             </statetype>
             <statetype name="upscrollarrow">
@@ -92,35 +99,48 @@
         </buttonlist>
 
         <buttonlist name="recordings" from="basebuttonlist">
-            <area>499,86,776,338</area>
-            <buttonarea>0,5,731,338</buttonarea>
-            <spacing>6</spacing>
-            <wrapstyle>items</wrapstyle>
-            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
+            <area>15,126,776,318</area>
+            <buttonarea>0,5,731,318</buttonarea>
+            <spacing>12</spacing>
+            <wrapstyle>none</wrapstyle>
+            <!--<triggerevent context="Global" action="MENU">RIGHT</triggerevent>-->
             <statetype name="buttonitem">
                 <state name="active">
                     <shape name="buttonbackground">
-                        <area>30,0,706,30</area>
+                        <area>30,0,776,30</area>
                         <type>roundbox</type>
                         <fill color="#666666" alpha="50" />
                         <line color="#FFFFFF" alpha="0" width="0" />
                         <cornerradius>15</cornerradius>
                     </shape>
                     <textarea name="titlesubtitle" from="buttontext">
-                        <area>46,1,421,31</area>
-                        <font>basesmallgrey</font>
-                        <font state="error">basesmallred</font>
-                        <font state="running">basesmallgreen</font>
+                        <area>46,1,550,31</area>
+                        <font>videolarge_gray</font>
+                        <font state="error">videolarge_red</font>
+                        <font state="running">videolarge_green</font>
                         <align>vcenter</align>
                     </textarea>
                     <textarea name="shortdate" from="titlesubtitle">
-                        <area>480,1,120,31</area>
+                        <area>550,1,120,31</area>
                         <align>right,vcenter</align>
                     </textarea>
                     <textarea name="starttime" from="shortdate">
-                        <area>611,1,105,31</area>
+                        <area>681,1,125,31</area>
                         <align>right,vcenter</align>
                     </textarea>
+                    <shape name="HLine1"> 
+    		            <area>30,-5,776,2</area> 
+    		            <type>box</type> 
+    		            <line color="#AAAAAA" alpha="0" width="2" /> 
+    		
+    		            <fill style="gradient">
+        	            <gradient direction="horizontal" alpha="255">
+                        <stop position="0" color="#AAAAAA" />
+                        <stop position="70" color="#AAAAAA" />
+                        <stop position="100" color="#AAAAAA" alpha="0" />
+        	            </gradient>
+    		            </fill>
+    	            </shape>
                     <statetype name="watched">
                         <state name="yes">
                             <imagetype name="yes">
@@ -142,19 +162,19 @@
                 </state>
                 <state name="selectedactive" from="active">
                     <shape name="buttonbackground">
-                        <area>30,0,706,30</area>
+                        <area>30,1,706,30</area>
                         <type>roundbox</type>
                         <fill color="#ffffff" alpha="50" />
-                        <cornerradius>15</cornerradius>
+                        <cornerradius>1</cornerradius>
                     </shape>
                     <textarea name="titlesubtitle">
-                        <font>basesmall</font>
+                        <font>videolarge</font>
                     </textarea>
                     <textarea name="shortdate">
-                        <font>basesmall</font>
+                        <font>videolarge</font>
                     </textarea>
                     <textarea name="starttime">
-                        <font>basesmall</font>
+                        <font>videolarge</font>
                     </textarea>
                 </state>
                 <state name="selectedinactive" from="active" />
@@ -308,7 +328,7 @@
             <area>10,5,480,90</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <font>basesmall</font>
+            <font>videolarge</font>
         </textarea>
 
         <buttonlist name="groups" from="basebuttonlist">
