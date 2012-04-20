@@ -41,6 +41,11 @@
         <color>#AAAAAA</color>
     </fontdef>
     
+    <fontdef name="videomedium" from="videosmall">
+        <size>22</size>
+        <color>#FFFFFF</color>
+    </fontdef>
+    
     <fontdef name="videolarge" from="videosmall">
         <size>25</size>
         <color>#FFFFFF</color>

@@ -1,6 +1,11 @@
 <mythuitheme>
 
     <window name="watchrecordings">
+        <animation trigger="AboutToShow">
+        	<section duration="2000">
+            	<alpha start="0" end="255" easingcurve="OutQuart"/>
+	        </section>
+    	</animation>
 
         <imagetype name="preview">
             <area>0,0,1280,720</area>
@@ -37,7 +42,7 @@
         </imagetype>
 
         <shape name="infobox">
-            <area>0,438,1280,282</area>
+            <area>0,448,1280,282</area>
             <type>box</type>
             <fill color="#000000" alpha="150" />
             <line color="#FFFFFF" alpha="0" width="0" />
@@ -336,26 +341,29 @@
         </imagetype>
 
         <textarea name="title" from="basetextarea">
-            <area>25,448,700,40</area>
-            <font>videolarge</font>
+            <area>25,470,900,40</area>
+            <font>videoxlarge</font>
             <cutdown>yes</cutdown>
-            <align>vcenter</align>
+            <align>vcenter, left</align>
+            <scroll direction="left" />
         </textarea>
 
         <textarea name="channel" from="basetextarea">
-            <area>25,498,160,30</area>
+            <area>26,522,180,30</area>
+            <align>vcenter, left</align>
         </textarea>
 
         <textarea name="timedate" from="basetextarea">
-            <area>195,498,480,30</area>
+            <area>215,522,480,30</area>
+            <align>vcenter, left</align>
         </textarea>
 
         <textarea name="description" from="basetextarea">
-            <area>25,538,1200,160</area>
-            <align>justify</align>
+            <area>25,558,1200,160</area>
+            <align>top, left</align>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
-            <font>videosmall</font>
+            <font>videomedium</font>
             <template>%|"SUBTITLE|"% %STARS% %DESCRIPTION%</template>
         </textarea>
 <!--
