@@ -19,30 +19,22 @@
         </imagetype>
 
         <shape name="titlebox">
-            <area>10,10,780,60</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="150" />
+            <area>0,10,400,45</area>
+            <type>box</type>
+            <fill style="gradient">
+        	    <gradient direction="horizontal" alpha="255">
+                    <stop position="0" color="#000000" alpha="255" />
+                    <stop position="100" color="#000000" alpha="0" />
+        	    </gradient>
+    		</fill>
             <line color="#FFFFFF" alpha="0" width="0" />
-            <cornerradius>30</cornerradius>
         </shape>
-
-        <shape name="groupbox">
-            <area>15,80,1265,348</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="150" />
-            <line color="#FFFFFF" alpha="0" width="0" />
-            <cornerradius>10</cornerradius>
-        </shape>
-
-<!--
-        <shape name="recordingsbox">
-            <area>494,80,771,348</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="150" />
-            <line color="#FFFFFF" alpha="0" width="0" />
-            <cornerradius>10</cornerradius>
-        </shape>
-        -->
+        
+        <imagetype name="groupbox">
+            <area>15,63,1250,375</area>
+            <filename>shared/ContentPanel.png</filename>
+            <alpha>170</alpha>
+        </imagetype>
 
         <shape name="infobox">
             <area>0,438,1280,282</area>
@@ -51,15 +43,27 @@
             <line color="#FFFFFF" alpha="0" width="0" />
         </shape>
 
+        <shape name="clockbackground">
+            <area>1000,10,280,45</area>
+            <type>box</type>
+            <fill style="gradient">
+        	    <gradient direction="horizontal" alpha="255">
+                    <stop position="0" color="#000000" alpha="0" />
+
+                    <stop position="100" color="#000000" alpha="255" />
+        	    </gradient>
+    		</fill>
+            <line color="#FFFFFF" alpha="0" width="0" />
+        </shape>
         <clock name="clock">
-            <area>420,10,520,60</area>
-            <font>videolarge</font>
-            <align>vcenter,left</align>
+            <area>1020,4,250,60</area>
+            <font>videosmall</font>
+            <align>vcenter,right</align>
             <format>%DATE%, %TIME%</format>
         </clock>
 
         <textarea name="pagetitle" from="basetextarea">
-            <area>50,10,670,60</area>
+            <area>50,4,670,60</area>
             <font>videolarge</font>
             <align>vcenter,left</align>
             <value>Watch Recordings</value>
@@ -129,7 +133,8 @@
             </statetype>
         </buttonlist>
 
-        <buttonlist name="recordings" from="basebuttonlist">
+        <!--<buttonlist name="recordings" from="basebuttonlist">-->
+        <buttonlist name="recordings">
             <area>15,126,776,318</area>
             <buttonarea>0,5,731,318</buttonarea>
             <spacing>12</spacing>
@@ -137,6 +142,7 @@
             <!--<triggerevent context="Global" action="MENU">RIGHT</triggerevent>-->
             <statetype name="buttonitem">
                 <state name="active">
+                <area>0,0,100%,30</area>
                 <!--
                     <shape name="buttonbackground">
                         <area>30,0,776,30</area>
@@ -145,25 +151,30 @@
                         <line color="#FFFFFF" alpha="0" width="0" />
                         <cornerradius>15</cornerradius>
                     </shape>-->
+                    <textarea name="buttontext">
+                        <area>16,0,94%,31</area>
+                        <font>videosmall_gray</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
                     <textarea name="titlesubtitle" from="buttontext">
-                        <area>32,3,550,31</area>
+                        <area>32,3,950,31</area>
                         <font>videolarge_gray</font>
                         <font state="error">videolarge_red</font>
                         <font state="running">videolarge_green</font>
                         <align>vcenter</align>
-                        <font>videolarge_gray</font>
                     </textarea>
                     <textarea name="startdate" from="titlesubtitle">
-                        <area>570,1,120,31</area>
+                        <area>930,1,140,31</area>
                         <align>right,vcenter</align>
                         <font>videosmall_gray</font>
                     </textarea>
                     <textarea name="starttime" from="startdate">
-                        <area>701,1,125,31</area>
+                        <area>1081,1,145,31</area>
                         <align>right,vcenter</align>
                     </textarea>
                     <shape name="HLine1"> 
-    		            <area>20,-5,776,2</area> 
+    		            <area>20,-5,1228,2</area> 
     		            <type>box</type> 
     		            <line color="#AAAAAA" alpha="0" width="2" /> 
     		
@@ -326,7 +337,7 @@
 
         <textarea name="title" from="basetextarea">
             <area>25,448,700,40</area>
-            <font>baselarge</font>
+            <font>videolarge</font>
             <cutdown>yes</cutdown>
             <align>vcenter</align>
         </textarea>
@@ -340,10 +351,11 @@
         </textarea>
 
         <textarea name="description" from="basetextarea">
-            <area>25,538,750,160</area>
+            <area>25,538,1200,160</area>
             <align>justify</align>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <font>videosmall</font>
             <template>%|"SUBTITLE|"% %STARS% %DESCRIPTION%</template>
         </textarea>
 <!--
