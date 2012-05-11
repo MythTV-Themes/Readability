@@ -112,7 +112,7 @@
 	
         <imagetype name="coverart">
             <area>0,0,600,720</area>
-            <filename>mv_browse_nocover_large.png</filename>
+            <filename>video/mv_browse_nocover.png</filename>
         </imagetype>
         <!--
          <imagetype name="upright">
@@ -132,11 +132,12 @@
         </imagetype>
 
         <textarea name="title" from="basetextarea">
-            <area>640,20,650,100</area>
-            <multiline>yes</multiline>
+            <area>640,20,600,100</area>
+            <multiline>no</multiline>
             <font>videoxlarge</font>
             <align>left</align>
             <case>upper</case>
+            <scroll direction="left" />
         </textarea>
         
         <textarea name="yrlbl" from="basetextarea">
@@ -282,8 +283,6 @@
             <align>hcenter,vcenter</align>
             <value>No videos in library, or no files found.  If you have configured a video directory, press "M" (or the MENU key) and select "Scan for Changes."</value> 
         </textarea>
-
-        
 
         <shape name="titlebox">
             <area>10,10,780,60</area>
@@ -913,8 +912,8 @@
             <area>10,0,1260,720</area>
             <multiline>yes</multiline>
             <align>hcenter,vcenter</align>
-            <value>No videos in library, or no files found.  If you have configured a video directory, press "M" (or the MENU key) and select "Scan for Changes."</value> 
             <font>videolarge</font>
+            <value>Loading Video Library\n If no videos appear your library is either empty or unconfigured (Press M to adjust settings)</value> 
         </textarea>
 
     </window>
