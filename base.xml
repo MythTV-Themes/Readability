@@ -734,7 +734,7 @@
     <!-- Base definition of a textarea -->
     <textarea name="basetextarea">
         <area>0,0,10,10</area>
-        <font>basesmall</font>
+        <font>videosmall</font>
         <multiline>no</multiline>
         <align>left</align>
     </textarea>
@@ -815,42 +815,85 @@
 
     <!-- Popup Dialogue Box -->
     <window name="MythPopupBox">
-        <area>-1,-1,500,500</area>
-        <shape name="backimg" from="basebackground">
-            <area>0,0,500,500</area>
+        <area>-1,-1,600,500</area>
+        <!-- These seem to be causing rendering havoc on 0.25.0
+        <animation trigger="AboutToShow">
+        	<section duration="500">
+            	<alpha start="0" end="255" easingcurve="OutQuart"/>
+	        </section>
+    	</animation>
+    	<animation trigger="AboutToHide">
+        	<section duration="500">
+            	<alpha start="255" end="0" easingcurve="OutQuart"/>
+	        </section>
+    	</animation>
+    	-->
+        
+        <shape name="backdrop">
+        	<area>-340,-110,1280,720</area>
+        	<type>box</type>
+        	<fill color="#000000" alpha="200" />
         </shape>
+        
+        <imagetype name="groupbox">
+            <area>0,0,600,500</area>
+            <filename>shared/ContentPanel.png</filename>
+            <alpha>255</alpha>
+        </imagetype>
 
         <textarea name="messagearea" from="basetextarea">
-            <area>15,15,470,210</area>
+            <area>15,15,570,210</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
+            <font>videomedium</font>
         </textarea>
-
-        <buttonlist name="list" from="basebuttonlist">
-            <area>18,225,470,250</area>
-            <spacing>4</spacing>
+        
+        <buttonlist name="list">
+            <area>15,225,570,250</area>
+            <buttonarea>0,5,470,250</buttonarea>
+            <spacing>12</spacing>
+            <wrapstyle>none</wrapstyle>
             <drawfrombottom>yes</drawfrombottom>
             <showarrow>no</showarrow>
-            <wrapstyle>selection</wrapstyle>
             <statetype name="buttonitem">
                 <state name="active">
+                <area>0,0,100%,30</area>
                     <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
-                        <align>allcenter</align>
+                        <area>25,2,94%,31</area>
+                        <font>videosmall_gray</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
                     </textarea>
+                    <shape name="HLine1"> 
+    		            <area>20,-5,100%,2</area> 
+    		            <type>box</type> 
+    		            <line color="#AAAAAA" alpha="0" width="2" /> 
+    		
+    		            <fill style="gradient">
+        	            <gradient direction="horizontal" alpha="255">
+                        <stop position="0" color="#AAAAAA" alpha="0"/>
+                        <stop position="30" color="#AAAAAA" />
+                        <stop position="70" color="#AAAAAA" />
+                        <stop position="100" color="#AAAAAA" alpha="0" />
+        	            </gradient>
+    		            </fill>
+    	            </shape>
                 </state>
-                <state name="selectedinactive">
-                    <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
-                        <align>allcenter</align>
-                    </textarea>
+                <state name="selectedactive" from="active">
+                    <shape name="buttonbackground">
+                        <area>22,-2,100%,39</area>
+                        <type>roundbox</type>
+                        <fill style="gradient">
+                            <gradient direction="horizontal" alpha="255">
+                            <stop position="0" color="#EAEAEA" alpha="100"/>
+                            <stop position="70" color="#EAEAEA" alpha="100"/>
+                            <stop position="100" color="#EAEAEA" alpha="0" />
+        	                </gradient>
+        	            </fill>
+                        <cornerradius>1</cornerradius>
+                    </shape>
                 </state>
-                <state name="selectedactive">
-                    <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
+                <state name="selectedinactive" from="active" />
             </statetype>
         </buttonlist>
     </window>
