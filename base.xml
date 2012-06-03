@@ -1,7 +1,7 @@
 <mythuitheme>
 
     <!-- Base Font Definitions -->
-    <fontdef name="basesmall" face="Arial">
+    <fontdef name="basesmall" face="Scout">
         <size>15</size>
         <color>#FFFFFF</color>
     </fontdef>
@@ -766,6 +766,7 @@
             <area>25,0,305,30</area>
             <align>vcenter,left</align>
             <font>basesmallblack</font>
+            <scroll>left</scroll>
         </textarea>
     </textedit>
 
@@ -812,6 +813,63 @@
             <filename>progressbar_fill.png</filename>
         </imagetype>
     </progressbar>
+    
+    <!-- Base definition of a spinbox -->
+    <spinbox name="basespinbox">
+        <area>0,0,80,40</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="buttonbackground">
+                    <area>0,0,100%,100%</area>
+                    <type>roundbox</type>
+                    <fill color="#333333" alpha="175" />
+                    <line color="#454545" alpha="180" width="2" />
+                    <cornerradius>90</cornerradius>
+                </shape>
+                <textarea name="buttontext">
+                    <area>11%,0,89%,100%</area>
+                    <font>basesmall</font>
+                    <cutdown>yes</cutdown>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedactive" from="active">
+                <shape name="buttonbackground" from="base_button_background_selected">
+                    <area>0,0,100%,100%</area>
+                </shape>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="downscrollarrow">
+            <position>100%,2</position>
+            <state type="off">
+                <imagetype name="dnoff">
+                    <filename>images/lb-rtarrow-reg.png</filename>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnon">
+                    <filename>images/lb-rtarrow-sel.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="upscrollarrow">
+            <position>100%,21</position>
+            <state type="off">
+                <imagetype name="upoff">
+                    <filename>images/lb-ltarrow-reg.png</filename>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upon">
+                    <filename>images/lb-ltarrow-sel.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+    
 
     <!-- Popup Dialogue Box -->
     <window name="MythPopupBox">
