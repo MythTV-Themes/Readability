@@ -899,13 +899,21 @@
             <font>videoxlarge</font>
             <align>vcenter,left</align>
             <scroll direction="left" />
-			<template>%TITLE%% - S|season%%E|episode%</template>
+			<!--<template>%TITLE%% - S|season%%E|episode%</template>-->
+			<template>%TITLE% - %SUBTITLE%</template>
         </textarea>
 
         <textarea name="position" from="basetextarea">
-            <area>980,636,190,60</area>
+            <area>1140,653,70,60</area>
             <align>vcenter,right</align>
             <font>basesmall</font>
+        </textarea>
+        
+        <textarea name="s##e##" from="basetextarea">
+            <area>1150,628,190,60</area>
+            <align>vcenter,left</align>
+            <font>basesmall</font>
+            <template>%S##E##%</template>
         </textarea>
 
         <textarea name="novideos" from="basetextarea">
