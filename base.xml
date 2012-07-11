@@ -741,14 +741,14 @@
 
     <!-- Base definition of a textedit -->
     <textedit name="basetextedit">
-        <area>0,0,375,30</area>
+        <area>0,0,375,35</area>
         <statetype name="background">
             <state name="active">
                 <area>0,0,375,30</area>
                 <shape name="textbackground">
-                    <area>0,0,355,30</area>
+                    <area>0,0,355,35</area>
                     <type>roundbox</type>
-                    <cornerradius>15</cornerradius>
+                    <cornerradius>4</cornerradius>
                     <fill color="#666666" alpha="100" />
                 </shape>
             </state>
@@ -763,9 +763,40 @@
             <filename>cursor.png</filename>
         </imagetype>
         <textarea name="text">
-            <area>25,0,305,30</area>
+            <area>25,0,305,35</area>
             <align>vcenter,left</align>
-            <font>basesmallblack</font>
+            <font>videolarge</font>
+            <scroll>left</scroll>
+        </textarea>
+    </textedit>
+    
+    <!-- Base definition of a wide textedit -->
+    <textedit name="widetextedit">
+        <area>0,0,870,35</area>
+        <statetype name="background">
+            <state name="active">
+                <area>0,0,870,30</area>
+                <shape name="textbackground">
+                    <area>0,0,845,35</area>
+                    <type>roundbox</type>
+                    <cornerradius>4</cornerradius>
+                    <fill color="#666666" alpha="100" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="100" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text">
+            <area>25,0,870,35</area>
+            <align>vcenter,left</align>
+            <font>videolarge</font>
             <scroll>left</scroll>
         </textarea>
     </textedit>
@@ -795,7 +826,7 @@
         <textarea name="text">
             <area>20,0,80,30</area>
             <align>vcenter,left</align>
-            <font>basesmallblack</font>
+            <font>videomedium</font>
         </textarea>
     </textedit>
 

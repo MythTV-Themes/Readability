@@ -1126,128 +1126,65 @@
             <value>Metadata Editor</value>
         </textarea>
 
-<!--
-        <shape name="video-metadata-top-backdrop" from="base_backdrop">
-            <area>20,36,1240,256</area>
-        </shape>
-
-        <shape name="video-metadata-top-backdrop-line" from="base_backdrop_line">
-            <area>21,37,1060,254</area>
-        </shape>
-
-        <shape name="video-metadata-top-line" from="base_highlight_line">
-            <area>22,38,1058,2</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-line" from="base_highlight_line">
-            <area>22,288,1058,2</area>
-        </shape>
-
-        <shape name="video-metadata-left-line" from="base_highlight_vertical_line">
-            <area>22,40,2,248</area>
-        </shape>
-
-        <shape name="video-metadata-right-line" from="base_highlight_vertical_line">
-            <area>1078,40,2,248</area>
-        </shape>
-
-        <shape name="video-metadata-coverart-backdrop-line" from="base_backdrop_line">
-            <area>1086,37,173,254</area>
-        </shape>
-
-        <shape name="video-metadata-coverart-top-line" from="base_highlight_line">
-            <area>1087,38,171,2</area>
-        </shape>
-
-        <shape name="video-metadata-coverart-bottom-line" from="base_highlight_line">
-            <area>1087,288,171,2</area>
-        </shape>
-
-        <shape name="video-metadata-coverart-left-line" from="base_highlight_vertical_line">
-            <area>1087,40,2,248</area>
-        </shape>
-
-        <shape name="video-metadata-coverart-right-line" from="base_highlight_vertical_line">
-            <area>1256,40,2,248</area>
-        </shape>
-
-        <shape name="video-bottom-metadata-backdrop" from="base_backdrop">
-            <area>20,304,1240,381</area>
-        </shape>
-
-        <shape name="video-bottom-metadata-backdrop-line" from="base_backdrop_line">
-            <area>21,305,1238,379</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-top-line" from="base_highlight_line">
-            <area>22,306,1236,2</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-bottom-line" from="base_highlight_line">
-            <area>22,681,1236,2</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-left-line" from="base_highlight_vertical_line">
-            <area>22,308,2,373</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-right-line" from="base_highlight_vertical_line">
-            <area>1256,308,2,373</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-seperator-first-line" from="base_vertical_line">
-            <area>430,327,3,335</area>
-        </shape>
-
-        <shape name="video-metadata-bottom-seperator-second-line" from="base_vertical_line">
-            <area>1060,327,3,335</area>
-        </shape>
--->
-
         <imagetype name="coverart">
             <area>1091,42,163,244</area>
             <mask>images/masks/edit_metadata_coverart_mask.png</mask>
             <preserveaspect>false</preserveaspect>
         </imagetype>
         
-        <textarea name="title_text" from="basetextarea">
-            <area>40,48,124,32</area>
+		<textarea name="title_text" from="basetextarea">
+            <area>40,48,152,32</area>
             <value>Title:</value>
             <align>right,vcenter</align>
+            <font>videolarge</font>
         </textarea>
         
         <textedit name="title_edit" from="basetextedit">
-            <area>177,48,366,32</area>
+            <area>205,48,366,32</area>
+        </textedit>
+        
+        <textarea name="inetref_text" from="basetextarea">
+            <area>556,48,124,32</area>
+            <value>TMDB:</value>
+            <align>right,vcenter</align>
+            <font>videolarge</font>
+        </textarea>
+
+        <textedit name="inetref_edit" from="basetextedit">
+            <area>696,48,366,32</area>
         </textedit>
 
         <textarea name="subtitle_text" from="basetextarea">
-            <area>40,88,124,32</area>
+            <area>40,88,152,32</area>
             <value>Subtitle:</value>
             <align>right,vcenter</align>
+            <font>videolarge</font>
         </textarea>
 
-        <textedit name="subtitle_edit" from="basetextedit">
-            <area>177,88,366,32</area>
+        <textedit name="subtitle_edit" from="widetextedit">
+            <area>205,88,870,32</area>
+        </textedit>
+        
+        <textarea name="tagline_text" from="basetextarea">
+            <area>40,128,152,32</area>
+            <value>Tagline:</value>
+            <align>right,vcenter</align>
+            <font>videolarge</font>
+        </textarea>
+
+        <textedit name="tagline_edit" from="widetextedit"> <!-- Wide -->
+            <area>205,128,870,32</area>
         </textedit>
 
         <textarea name="director_text" from="basetextarea">
-            <area>40,128,124,32</area>
+            <area>40,168,124,32</area>
             <value>Director:</value>
             <align>right,vcenter</align>
+            <font>videolarge</font>
         </textarea>
 
         <textedit name="director_edit" from="basetextedit">
-            <area>177,128,366,32</area>
-        </textedit>
-
-        <textarea name="tagline_text" from="basetextarea">
-            <area>40,168,124,32</area>
-            <value>Tagline:</value>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textedit name="tagline_edit" from="basetextedit"> <!-- Wide -->
-            <area>177,168,885,32</area>
+            <area>177,168,366,32</area>
         </textedit>
 
         <textarea name="homepage_text_label" from="basetextarea">
@@ -1268,26 +1205,6 @@
 
         <textedit name="player_edit" from="basetextedit"><!-- Wide -->
             <area>177,248,885,32</area>
-        </textedit>
-
-        <textarea name="rating_text" from="basetextarea">
-            <area>556,48,124,32</area>
-            <value>Rating:</value>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textedit name="rating_edit" from="basetextedit">
-            <area>696,48,366,32</area>
-        </textedit>
-
-        <textarea name="inetref_text" from="basetextarea">
-            <area>556,88,124,32</area>
-            <value>TMDB:</value>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textedit name="inetref_edit" from="basetextedit">
-            <area>696,88,366,32</area>
         </textedit>
 
         <textarea name="season_text" from="basetextarea">
