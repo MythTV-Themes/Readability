@@ -904,8 +904,7 @@
 
     <!-- Popup Dialogue Box -->
     <window name="MythPopupBox">
-        <area>-1,-1,600,500</area>
-        <!-- These seem to be causing rendering havoc on 0.25.0
+        <area>-1,-1,1279,719</area>
         <animation trigger="AboutToShow">
         	<section duration="500">
             	<alpha start="0" end="255" easingcurve="OutQuart"/>
@@ -916,29 +915,28 @@
             	<alpha start="255" end="0" easingcurve="OutQuart"/>
 	        </section>
     	</animation>
-    	-->
-        
+    	
         <shape name="backdrop">
-        	<area>-340,-110,1280,720</area>
+        	<area>0,-1,1280,720</area>
         	<type>box</type>
         	<fill color="#000000" alpha="200" />
         </shape>
         
         <imagetype name="groupbox">
-            <area>0,0,600,500</area>
+            <area>340,110,600,500</area>
             <filename>shared/ContentPanel.png</filename>
             <alpha>255</alpha>
         </imagetype>
 
         <textarea name="messagearea" from="basetextarea">
-            <area>15,15,570,210</area>
+            <area>355,125,570,210</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
             <font>videomedium</font>
         </textarea>
         
         <buttonlist name="list">
-            <area>15,225,570,250</area>
+            <area>355,340,570,250</area>
             <buttonarea>0,5,470,250</buttonarea>
             <spacing>12</spacing>
             <wrapstyle>none</wrapstyle>

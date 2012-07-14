@@ -873,6 +873,7 @@
 				        	</gradient>
     					</fill>
                         <cornerradius>7</cornerradius>
+                        <alphapulse min="128" max="255" change="2"/>
                     </shape>
                     <!--
                     <textarea name="buttontext">
