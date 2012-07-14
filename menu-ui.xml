@@ -14,9 +14,9 @@
             <fill color="#000000" alpha="150" />
         </shape>
 
-        <fontdef name="menufont" from="baseextralarge">
+        <fontdef name="menufont" from="videoxlarge">
             <color>#FFFFFF</color>
-            <size>28</size>
+            <size>32</size>
         </fontdef>
 
         <fontdef name="selectedmenufont" from="menufont">
@@ -27,7 +27,7 @@
         <buttonlist name="menu">
             <area>40,95,740,580</area>
             <layout>vertical</layout>
-            <spacing>30</spacing>
+            <spacing>12</spacing>
             <wrapstyle>items</wrapstyle>
             <buttonarea>40,55,730,460</buttonarea>
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
@@ -35,26 +35,55 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,700,60</area>
+                    <!--
                     <shape name="slctbr">
                         <area>0,0,680,60</area>
                         <type>roundbox</type> 
-                        <fill color="#666666" alpha="50" />
-                        <cornerradius>30</cornerradius> 
+                        <fill style="gradient">
+        					<gradient direction="horizontal" alpha="255">
+           						<stop position="0" color="#666666" alpha="130" />
+					            <stop position="100" color="#666666" alpha="0" />
+				        	</gradient>
+    					</fill>
+                        <cornerradius>3</cornerradius> 
                     </shape>
+                    -->
                     <textarea name="buttontext">
                         <area>30,0,620,60</area>
                         <font>menufont</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
                     </textarea>
+                    <shape name="HLine1"> 
+    		            <area>20,-5,100%,2</area> 
+    		            <type>box</type> 
+    		            <line color="#AAAAAA" alpha="0" width="2" /> 
+    		
+    		            <fill style="gradient">
+        	            <gradient direction="horizontal" alpha="255">
+                        <stop position="0" color="#AAAAAA" alpha="0"/>
+                        <stop position="30" color="#AAAAAA" />
+                        <stop position="70" color="#AAAAAA" />
+                        <stop position="100" color="#AAAAAA" alpha="0" />
+        	            </gradient>
+    		            </fill>
+    	            </shape>
                 </state>
                 <state name="selectedactive" from="active">
                     <shape name="slctbr">
-                        <area>-10,-10,700,80</area>
+                        <area>25,-2,680,68</area>
                         <type>roundbox</type> 
-                        <fill color="#FFFFFF" alpha="50" />
-                        <cornerradius>40</cornerradius> 
+                        <!--<fill color="#FFFFFF" alpha="50" />-->
+                        <fill style="gradient">
+                            <gradient direction="horizontal" alpha="255">
+                            <stop position="0" color="#EAEAEA" alpha="100"/>
+                            <stop position="70" color="#EAEAEA" alpha="100"/>
+                            <stop position="100" color="#EAEAEA" alpha="0" />
+        	                </gradient>
+        	            </fill>
+                        <cornerradius>1</cornerradius> 
                     </shape>
+                    
                     <textarea name="buttontext">
                         <area>30,-10,640,80</area>
                         <font>selectedmenufont</font>
