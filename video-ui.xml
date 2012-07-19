@@ -1134,7 +1134,7 @@
 
         <imagetype name="coverart">
             <area>1091,42,163,244</area>
-            <mask>images/masks/edit_metadata_coverart_mask.png</mask>
+            <mask>shared/masks/edit_metadata_coverart_mask.png</mask>
             <preserveaspect>false</preserveaspect>
         </imagetype>
         
@@ -1145,19 +1145,44 @@
             <font>videolarge</font>
         </textarea>
         
-        <textedit name="title_edit" from="basetextedit">
-            <area>205,48,366,32</area>
+        <textedit name="title_edit">
+            <area>205,48,525,35</area>
+        	<statetype name="background">
+            <state name="active">
+                <area>0,0,525,30</area>
+                <shape name="textbackground">
+                    <area>0,0,505,35</area>
+                    <type>roundbox</type>
+                    <cornerradius>4</cornerradius>
+                    <fill color="#666666" alpha="100" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="100" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        	</statetype>
+        	<imagetype name="cursor">
+            	<filename>cursor.png</filename>
+        	</imagetype>
+        	<textarea name="text">
+            	<area>25,0,455,35</area>
+            	<align>vcenter,left</align>
+            	<font>videolarge</font>
+        	</textarea>
         </textedit>
         
         <textarea name="inetref_text" from="basetextarea">
-            <area>556,48,124,32</area>
+            <area>696,48,124,32</area>
             <value>TMDB:</value>
             <align>right,vcenter</align>
             <font>videolarge</font>
         </textarea>
 
-        <textedit name="inetref_edit" from="basetextedit">
-            <area>696,48,366,32</area>
+        <textedit name="inetref_edit" from="narrowtextedit">
+            <area>826,48,266,32</area>
         </textedit>
 
         <textarea name="subtitle_text" from="basetextarea">
@@ -1182,35 +1207,38 @@
             <area>205,128,870,32</area>
         </textedit>
 
+        <textarea name="homepage_text_label" from="basetextarea">
+            <area>20,168,172,32</area>
+            <value>Homepage:</value>
+            <align>right,vcenter</align>
+            <font>videolarge</font>
+        </textarea>
+
+        <textedit name="homepage_edit" from="widetextedit"><!-- Wide -->
+            <area>205,168,366,32</area>
+        </textedit>
+
         <textarea name="director_text" from="basetextarea">
-            <area>40,168,124,32</area>
+            <area>40,208,152,32</area>
             <value>Director:</value>
             <align>right,vcenter</align>
             <font>videolarge</font>
         </textarea>
 
         <textedit name="director_edit" from="basetextedit">
-            <area>177,168,366,32</area>
-        </textedit>
-
-        <textarea name="homepage_text_label" from="basetextarea">
-            <area>40,208,124,32</area>
-            <value>Homepage:</value>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textedit name="homepage_edit" from="basetextedit"><!-- Wide -->
-            <area>177,208,885,32</area>
+            
+            <area>205,208,885,32</area>
         </textedit>
 
         <textarea name="player_text" from="basetextarea">
-            <area>40,248,124,32</area>
+            <area>40,248,152,32</area>
             <align>right,vcenter</align>
+            <font>videolarge</font>
             <value>Player:</value>
         </textarea>
 
         <textedit name="player_edit" from="basetextedit"><!-- Wide -->
-            <area>177,248,885,32</area>
+            <area>205,248,885,32</area>
         </textedit>
 
         <textarea name="season_text" from="basetextarea">
