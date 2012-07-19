@@ -18,7 +18,7 @@
         </imagetype>
 
         <imagetype name="fanartoverlay">
-            <area>0,0,1280,760</area>
+            <area>0,0,1280,720</area>
             <filename>video/movieinfogradient.png</filename>
             <alpha>170</alpha>
         </imagetype>

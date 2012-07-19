@@ -759,6 +759,11 @@
             	<alpha start="0" end="255" easingcurve="OutQuart"/>
 	        </section>
     	</animation>
+    	<animation trigger="AboutToHide">
+        	<section duration="500">
+            	<alpha start="255" end="0" easingcurve="OutQuart"/>
+	        </section>
+    	</animation>
 
         <imagetype name="fanart">
             <filename>background.png</filename>
@@ -766,7 +771,7 @@
             <preserveaspect>yes</preserveaspect>
         </imagetype>
         <imagetype name="fanartoverlay">
-            <area>0,0,1280,760</area>
+            <area>0,0,1280,720</area>
             <filename>video/movieinfogradient.png</filename>
             <alpha>230</alpha>
         </imagetype>
