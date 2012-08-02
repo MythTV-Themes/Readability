@@ -418,7 +418,7 @@
 
         <textarea name="title">
             <font>videoxlarge</font>
-            <area>10,10,800,30</area>
+            <area>10,10,800,70</area>
             <align>left,top</align>
             <scroll>left</scroll>
         </textarea>
