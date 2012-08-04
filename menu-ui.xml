@@ -2,12 +2,18 @@
 
     <window name="mainmenu">
 
+        <animation trigger="AboutToShow">
+        	<section duration="500">
+            	<alpha start="0" end="255" easingcurve="OutQuart"/>
+	        </section>
+    	</animation>
+    	<!-- For some reason this makes the menu vanish sometimes
     	<animation trigger="AboutToHide">
         	<section duration="500">
             	<alpha start="255" end="0" easingcurve="OutQuart"/>
 	        </section>
     	</animation>
-
+-->
         <shape name="titlebox">
             <area>-10,-10,1300,130</area>
             <type>box</type>
