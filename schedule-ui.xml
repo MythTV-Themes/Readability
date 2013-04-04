@@ -204,44 +204,18 @@
     <window name="programguide-video">
 
         <imagetype name="video">
-            <area>940,50,300,170</area>
+            <area>820,0,300,170</area>
+            <!--<area>0,0,0,0</area>-->
+        </imagetype>
+        
+        <imagetype name="detailbackground">
+            <area>0,0,1280,720</area>
+            <filename>video/movieinfogradient.png</filename>
+            <alpha>230</alpha>
         </imagetype>
 
-        <shape name="shape1">
-            <area>20,20,1240,210</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30"></fill>
-            <cornerradius>15</cornerradius>
-        </shape>
 
-        <shape name="shape2">
-            <area>30,125,890,100</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30"></fill>
-            <cornerradius>15</cornerradius>
-        </shape>
-
-        <shape name="shape3">
-            <area>30,75,500,40</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30"></fill>
-            <cornerradius>15</cornerradius>
-        </shape>
-
-        <shape name="shape4">
-            <area>540,75,380,40</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30"></fill>
-            <cornerradius>15</cornerradius>
-        </shape>
-
-        <shape name="shape5">
-            <area>20,240,1240,455</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30"></fill>
-            <cornerradius>15</cornerradius>
-        </shape>
-
+<!--
         <shape name="shape6">
             <area>935,45,310,180</area>
             <type>roundbox</type>
@@ -259,12 +233,12 @@
             <align>bottom,hcenter</align>
             <font>basesmallpurple</font>
         </textarea>
-
+-->
         <guidegrid name="guidegrid">
-            <area>220,295,1032,390</area>
+            <area>196,45,594,675</area>
             <layout>horizontal</layout>
             <channels>5</channels>
-            <timeslots>4</timeslots>
+            <timeslots>3</timeslots>
             <solidcolor>#003256</solidcolor>
             <selector type="box" linecolor="#bcbcbc"></selector>
             <showcategories>yes</showcategories>
@@ -283,26 +257,27 @@
             <recordstatus type="OverrideRecord" image="shared/gg-rs-override.png"></recordstatus>
             <arrow direction="left" image="shared/gg-arrow-left.png"></arrow>
             <arrow direction="right" image="shared/gg-arrow-right.png"></arrow>
-            <font>basesmall</font>
+            <font>basemedium</font>
         </guidegrid>
 
         <buttonlist name="timelist">
-            <area>220,250,1036,36</area>
+            <area>196,0,594,44</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
-            <buttonarea>0,0,1036,36</buttonarea>
+            <buttonarea>0,0,594,44</buttonarea>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
-                <area>0,0,258,36</area>
+                <area>0,0,198,44</area>
                 <state name="active">
-                    <imagetype name="buttonbackground">
-                        <area>0,0,258,36</area>
-                        <filename>gg-times.png</filename>
-                    </imagetype>
+                    <shape name="itembackground">
+                        <area>0,0,198,44</area>
+                        <type>box</type>
+                        <fill color="#000000" alpha="30"></fill>
+                    </shape>
                     <textarea name="buttontext" from="basetextarea">
-                        <area>0,0,258,36</area>
-                        <font>basesmall</font>
-                        <align>hcenter,bottom</align>
+                        <area>0,0,198,44</area>
+                        <font>basemedium</font>
+                        <align>hcenter,vcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active"/>
@@ -335,28 +310,36 @@
         </buttonlist>
 
         <buttonlist name="channellist">
-            <area>25,295,190,395</area>
+            <area>0,45,195,675</area>
             <layout>vertical</layout>
             <spacing>0</spacing>
-            <buttonarea>0,0,190,395</buttonarea>
+            <buttonarea>0,0,195,675</buttonarea>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
-                <area>0,0,195,74</area>
+                <area>0,0,195,135</area>
                 <state name="active">
-                    <imagetype name="buttonbackground">
-                        <area>0,0,190,78</area>
-                        <filename>gg-chans.png</filename>
-                    </imagetype>
+                    <shape name="itembackground">
+                        <area>0,1,195,133</area>
+                        <type>box</type>
+                        <fill style="gradient">
+                            <gradient direction="horizontal" alpha="255">
+                                <stop position="0" color="#000000" alpha="0"/>
+                                <stop position="100" color="#000000" alpha="130" />
+                            </gradient>
+                        </fill>
+                    </shape>
+                    <!--
                     <imagetype name="channelicon">
                         <area>10,15,40,40</area>
-                    </imagetype>
+                    </imagetype>-->
                     <textarea name="buttontext" from="basetextarea">
-                        <area>55,0,130,78</area>
-                        <font>basesmall</font>
+                        <area>0,0,195,135</area>
+                        <font>basemedium</font>
                         <font state="favourite">basesmallyellow</font>
                         <font state="unavailable">basesmallblue</font>
                         <font state="favunavailable">basesmallpurple</font>
                         <cutdown>no</cutdown>
+                        <multiline>yes</multiline>
                         <align>allcenter</align>
                     </textarea>
                 </state>
@@ -390,7 +373,8 @@
         </buttonlist>
 
         <clock name="time">
-            <area>1090,15,150,32</area>
+            <!--<area>1090,15,150,32</area>-->
+            <area>0,15,150,32</area>
             <align>bottom,right</align>
             <format>%TIME%</format>
         </clock>
@@ -399,22 +383,28 @@
 <area>40,22,50,50</area>
 </imagetype>
 -->
+        <imagetype name="dividershadow">
+            <area>713,0,77,720</area>
+            <filename>video/movieinfoshadow_left.png</filename>
+        </imagetype>
+        
         <textarea name="title" from="basetextarea">
-            <area>100,22,800,50</area>
+            <area>820,180,430,50</area>
+            <align>left,vcenter</align>
+            <font>baseextralarge</font>
+            <case>upper</case>
+        </textarea>
+
+        <textarea name="subtitle" from="basetextarea">
+            <area>820,270,480,30</area>
             <align>left,vcenter</align>
             <font>baselarge</font>
         </textarea>
 
-        <textarea name="subtitle" from="basetextarea">
-            <area>40,80,480,30</area>
-            <align>left,vcenter</align>
-            <font>basesmall</font>
-        </textarea>
-
         <textarea name="description" from="basetextarea">
-            <area>40,130,870,90</area>
+            <area>820,310,430,500</area>
             <multiline>yes</multiline>
-            <template>%LONGREPEAT%%YEARSTARS%%DESCRIPTION%</template>
+            <template>%LONGREPEAT%%YEARSTARS% %DESCRIPTION%</template>
         </textarea>
 
         <textarea name="rectypestatus" from="basetextarea">
