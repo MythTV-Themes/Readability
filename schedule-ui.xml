@@ -908,56 +908,56 @@
     </window>
 
     <window name="phrasepopup">
-        <area>-1,-1,500,500</area>
+        <area>-1,-1,700,500</area>
 
         <shape name="box" from="basebackground">
-            <area>0,0,500,500</area>
+            <area>0,0,700,500</area>
         </shape>
 
         <textarea name="title_text" from="basetextarea">
-            <area>20,15,460,40</area>
+            <area>20,15,660,40</area>
             <font>basemedium</font>
             <align>hcenter,top</align>
             <value>Phrase</value>
         </textarea>
 
         <buttonlist name="phrase_list" from="basebuttonlist">
-            <area>20,60,460,270</area>
+            <area>20,60,660,270</area>
             <align>left</align>
             <showarrow>no</showarrow>
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext">
-                        <area>5,0,450,30</area>
+                        <area>5,0,650,30</area>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
-                        <area>5,0,450,30</area>
+                        <area>5,0,650,30</area>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
-                        <area>5,0,450,30</area>
+                        <area>5,0,650,30</area>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
 
         <textedit name="phrase_edit" from="basetextedit">
-            <position>72,360</position>
+            <position>172,360</position>
         </textedit>
 
         <button name="ok_button" from="basebutton">
-            <position>12,440</position>
+            <position>20,420</position>
         </button>
 
         <button name="delete_button" from="basebutton">
-            <position>173,440</position>
+            <position>248,420</position>
         </button>
 
         <button name="record_button" from="basebutton">
-            <position>333,440</position>
+            <position>476,420</position>
         </button>
 
     </window>
