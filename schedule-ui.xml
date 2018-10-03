@@ -950,7 +950,8 @@
 
         <button name="ok_button" from="basebutton">
             <position>20,420</position>
-        </button>
+            <value>Search</value>
+         </button>
 
         <button name="delete_button" from="basebutton">
             <position>248,420</position>
@@ -991,72 +992,72 @@
     </window>
 
     <window name="powersearchpopup">
-        <area>-1,-1,500,500</area>
+        <area>-1,-1,700,500</area>
 
         <shape name="box" from="basebackground">
-            <area>0,0,500,500</area>
+            <area>0,0,700,500</area>
         </shape>
 
         <textarea name="title_text" from="basetextarea">
-            <area>20,10,460,40</area>
+            <area>20,15,660,40</area>
             <font>baselarge</font>
             <align>hcenter,top</align>
             <value>Select Search</value>
         </textarea>
 
         <buttonlist name="phrase_list" from="basebuttonlist">
-            <area>20,60,450,350</area>
+            <area>20,60,660,270</area>
             <align>left</align>
             <showarrow>no</showarrow>
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext">
-                        <area>5,0,450,30</area>
+                        <area>5,0,650,30</area>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
-                        <area>5,0,450,30</area>
+                         <area>5,0,650,30</area>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
-                        <area>5,0,450,30</area>
+                        <area>5,0,650,30</area>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
 
         <button name="edit_button" from="basebutton">
-            <position>12,440</position>
+            <position>20,420</position>
         </button>
 
         <button name="delete_button" from="basebutton">
-            <position>173,440</position>
+            <position>248,420</position>
         </button>
 
         <button name="record_button" from="basebutton">
-            <position>333,440</position>
+            <position>476,420</position>
         </button>
 
     </window>
 
     <window name="editpowersearchpopup">
-        <area>-1,-1,500,550</area>
+        <area>-1,-1,700,500</area>
 
         <shape name="box" from="basebackground">
-            <area>0,0,500,550</area>
+            <area>0,0,700,500</area>
         </shape>
 
         <textarea name="title_text" from="basetextarea">
-            <area>20,10,460,40</area>
+            <area>20,15,660,40</area>
             <font>baselarge</font>
             <align>hcenter,top</align>
             <value>Edit Power Search Fields</value>
         </textarea>
 
         <textarea name="titlelabel" from="basetextarea">
-            <area>60,50,480,30</area>
+            <area>60,50,660,30</area>
             <font>basesmall</font>
             <value>Optional title phrase:</value>
         </textarea>
@@ -1066,7 +1067,7 @@
         </textedit>
 
         <textarea name="subtitlelabel" from="basetextarea">
-            <area>60,140,460,30</area>
+            <area>60,140,660,30</area>
             <font>basesmall</font>
             <value>Optional subtitle phrase:</value>
         </textarea>
@@ -1098,7 +1099,8 @@
         </buttonlist>
 
         <button name="ok_button" from="basebutton">
-            <position>170,490</position>
+            <position>440,400</position>
+            <value>Search</value>
         </button>
 
     </window>
