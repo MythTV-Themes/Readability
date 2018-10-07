@@ -1756,12 +1756,12 @@
         </button>
 
         <button name="cancel" from="basebutton">
-            <position>377,642</position>
+            <position>377,631</position>
             <value>Cancel</value>
         </button>
 
         <button name="save" from="basebutton">
-            <position>752,642</position>
+            <position>706,631</position>
             <value>Save</value>
         </button>
     </window>
