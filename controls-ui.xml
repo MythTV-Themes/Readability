@@ -13,7 +13,7 @@
         </textarea>
 
         <button name="cancel" from="basebutton">
-            <position>85,420</position>
+            <position>45,420</position>
             <value>Cancel</value>
         </button>
 
@@ -46,19 +46,19 @@
         </buttonlist>
 
         <button name="action_0" from="basebutton">
-            <position>275,560</position>
+            <position>210,560</position>
         </button>
 
         <button name="action_1" from="action_0">
-            <position>465,560</position>
+            <position>430,560</position>
         </button>
 
         <button name="action_2" from="action_0">
-            <position>655,560</position>
+            <position>650,560</position>
         </button>
 
         <button name="action_3" from="action_0">
-            <position>845,560</position>
+            <position>870,560</position>
         </button>
 
         <textarea name="description" from="basetextarea">
